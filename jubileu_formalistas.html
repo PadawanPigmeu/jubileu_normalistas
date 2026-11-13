@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Jubileu de Ouro - Normalistas Zoroastro Vianna Passos</title>
+    <meta name="description" content="Convite oficial para as solenidades do Jubileu de Ouro (1976 — 2026) das Normalistas da E. E. Professor Zoroastro Vianna Passos.">
+
+    <!-- Meta Tags Open Graph (Preview bonito no WhatsApp, Facebook e Telegram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Jubileu de Ouro • 1976 – 2026">
+    <meta property="og:title" content="Convite: Jubileu de Ouro das Normalistas (50 Anos)">
+    <meta property="og:description" content="E. E. Prof. Zoroastro Vianna Passos — Toque para abrir o convite interativo e conferir a programação festiva.">
+    <meta property="og:image" content="https://placehold.co/1200x630/3d121a/e5b50f.png?text=Jubileu+de+Ouro%0ANormalistas+1976+-+2026">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card (Melhora compatibilidade com alguns apps de mensagem) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Convite: Jubileu de Ouro das Normalistas (50 Anos)">
+    <meta name="twitter:description" content="E. E. Prof. Zoroastro Vianna Passos — Toque para abrir o convite interativo e conferir a programação festiva.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/3d121a/e5b50f.png?text=Jubileu+de+Ouro%0ANormalistas+1976+-+2026">
+
+    <!-- Ícone da aba do navegador (Favicon "50" em dourado e vinho) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233d121a' stroke='%23e5b50f' stroke-width='4'/%3E%3Ctext x='32' y='41' font-family='Georgia, serif' font-size='26' font-weight='bold' fill='%23e5b50f' text-anchor='middle'%3E50%3C/text%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Montserrat & Alex Brush -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fffdf0',
+                            100: '#fefbcf',
+                            200: '#fdf39f',
+                            300: '#fce666',
+                            400: '#fbd430',
+                            500: '#e5b50f',
+                            600: '#ca9408',
+                            700: '#a16d07',
+                            800: '#83540e',
+                            900: '#6f4412',
+                        },
+                        burgundy: {
+                            800: '#581c26',
+                            900: '#3d121a',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        script: ['"Alex Brush"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: radial-gradient(circle at center, #2c1a1d 0%, #0f0809 100%);
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Proporção Desktop (18cm x 14cm) */
+        .book-container {
+            width: 94vw;
+            max-width: 770px;
+            height: 71.5vw;
+            max-height: 600px;
+            perspective: 1500px;
+            position: relative;
+        }
+
+        /* Ajuste Mobile: Aproveita a altura da tela para eliminar rolagem */
+        @media (max-width: 639px) {
+            .book-container {
+                width: 95vw;
+                height: 72dvh;
+                min-height: 490px;
+                max-height: 640px;
+            }
+            .page {
+                padding: 1.15rem !important;
+            }
+            .corner-ornament {
+                width: 24px !important;
+                height: 24px !important;
+                top: 8px !important;
+                left: 8px !important;
+            }
+            .corner-ornament-tr { right: 8px !important; left: auto !important; }
+            .corner-ornament-br { bottom: 8px !important; right: 8px !important; top: auto !important; left: auto !important; }
+            .corner-ornament-bl { bottom: 8px !important; left: 8px !important; top: auto !important; }
+        }
+
+        /* Cartão e efeito de página */
+        .book {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+        }
+
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #fffdfa;
+            background-image: radial-gradient(#f7efe3 1px, transparent 0);
+            background-size: 24px 24px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 40px rgba(212, 175, 55, 0.08);
+            border: 2px solid #dfc686;
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            backface-visibility: hidden;
+            transform-origin: left center;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            overflow-y: auto;
+        }
+
+        .page.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: rotateY(0deg);
+            z-index: 10;
+        }
+
+        .page.turn-left {
+            transform: rotateY(-180deg);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .page.turn-right {
+            transform: rotateY(180deg);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        /* Personalização da barra de rolagem interna */
+        .page::-webkit-scrollbar {
+            width: 4px;
+        }
+        .page::-webkit-scrollbar-track {
+            background: #f1ebd9;
+            border-radius: 10px;
+        }
+        .page::-webkit-scrollbar-thumb {
+            background: #ca9408;
+            border-radius: 10px;
+        }
+
+        /* Ajustes de Impressão */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .book-container {
+                width: 100% !important;
+                max-width: none !important;
+                height: auto !important;
+                max-height: none !important;
+            }
+            .page {
+                position: relative !important;
+                opacity: 1 !important;
+                transform: none !important;
+                page-break-after: always;
+                border: 1px solid #ccc !important;
+                margin-bottom: 20px;
+                height: 14cm !important;
+                width: 18cm !important;
+                box-shadow: none !important;
+            }
+        }
+
+        /* Efeito de brilho de página comemorativa */
+        .corner-ornament {
+            width: 40px;
+            height: 40px;
+            border-top: 2px solid #ca9408;
+            border-left: 2px solid #ca9408;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            pointer-events: none;
+        }
+        .corner-ornament-tr {
+            transform: rotate(90deg);
+            top: 12px; right: 12px; left: auto;
+        }
+        .corner-ornament-br {
+            transform: rotate(180deg);
+            bottom: 12px; right: 12px; top: auto; left: auto;
+        }
+        .corner-ornament-bl {
+            transform: rotate(270deg);
+            bottom: 12px; left: 12px; top: auto;
+        }
+
+        .in-memoriam {
+            font-size: 0.65rem;
+            color: #71717a;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="p-2 sm:p-6">
+
+    <!-- Top Toolbar / Controles -->
+    <header class="no-print mb-2 sm:mb-4 w-full max-w-4xl flex justify-between items-center bg-burgundy-900/80 backdrop-blur-md px-3 py-2 sm:px-4 sm:py-3 rounded-xl border border-gold-600/40 shadow-lg text-amber-100">
+        <div class="flex items-center space-x-2.5">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gold-600 flex items-center justify-center text-burgundy-900 font-bold text-xs sm:text-sm shrink-0">
+                50
+            </div>
+            <div>
+                <h1 class="font-serif text-xs sm:text-base font-semibold leading-tight text-gold-300">Jubileu de Ouro de Formatura</h1>
+                <p class="text-[10px] sm:text-xs text-amber-200/70">E. E. Prof. Zoroastro Vianna Passos</p>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-1.5 sm:space-x-2">
+            <button onclick="printInvitation()" title="Imprimir Convite" class="px-2.5 py-1.5 bg-amber-900/60 hover:bg-gold-600 hover:text-burgundy-900 border border-gold-500/50 rounded-lg text-[11px] sm:text-xs font-medium transition flex items-center gap-1">
+                <i class="fas fa-print"></i>
+                <span class="hidden sm:inline">Imprimir</span>
+            </button>
+            <button onclick="toggleAudio()" id="audioBtn" title="Música de Fundo" class="px-2.5 py-1.5 bg-amber-900/60 hover:bg-gold-600 hover:text-burgundy-900 border border-gold-500/50 rounded-lg text-[11px] sm:text-xs font-medium transition flex items-center gap-1">
+                <i class="fas fa-music" id="audioIcon"></i>
+                <span id="audioText">Som</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Livro / Convite -->
+    <main class="book-container my-auto">
+        <div class="book" id="book">
+            
+            <!-- PÁGINA 1: CAPA -->
+            <section class="page active" id="page-1" data-page="1">
+                <div class="corner-ornament"></div>
+                <div class="corner-ornament corner-ornament-tr"></div>
+                <div class="corner-ornament corner-ornament-br"></div>
+                <div class="corner-ornament corner-ornament-bl"></div>
+
+                <div class="h-full flex flex-col justify-between items-center text-center p-1 sm:p-4">
+                    <div class="space-y-1">
+                        <span class="text-[11px] sm:text-xs uppercase tracking-widest text-amber-800 font-semibold">1976 — 2026</span>
+                        <div class="w-16 h-0.5 bg-gold-500 mx-auto my-1"></div>
+                        <h3 class="font-serif text-xs sm:text-base text-amber-900 font-medium">Escola Estadual Professor Zoroastro Vianna Passos</h3>
+                    </div>
+
+                    <div class="my-auto py-1">
+                        <div class="font-script text-4xl sm:text-6xl text-gold-600 my-1">Jubileu de Ouro</div>
+                        <h2 class="font-serif text-xl sm:text-3xl font-bold tracking-wide text-burgundy-900 my-1">
+                            FORMATURA DE NORMALISTAS
+                        </h2>
+                        <div class="inline-block px-3 py-1 mt-1.5 bg-amber-100 border border-gold-400 rounded-full text-[10px] sm:text-xs font-semibold text-amber-900 tracking-wider">
+                            50 ANOS DE DEDICAÇÃO À EDUCAÇÃO
+                        </div>
+                    </div>
+
+                    <div class="relative px-3 py-2.5 sm:px-4 sm:py-3 bg-amber-50/70 border-l-2 border-r-2 border-gold-500 rounded-lg max-w-xl mx-auto shadow-sm">
+                        <p class="font-serif italic text-[11px] sm:text-sm text-gray-700 leading-relaxed">
+                            “Há meio século, cruzamos juntas as portas da nossa escola pronta para abraçar a vocação de educar, transformar vidas e deixar marcas no mundo. As décadas passaram, mas as memórias dos nossos risos, dos desafios superados e da amizade sincera continuam vivas em nossos corações.”
+                        </p>
+                    </div>
+
+                    <div class="pt-1.5 text-[11px] sm:text-xs font-semibold text-gold-700 uppercase tracking-widest flex items-center gap-2">
+                        <i class="fas fa-bookmark text-gold-500"></i> As Normalistas
+                    </div>
+                </div>
+            </section>
+
+            <!-- PÁGINA 2: CONVITE FORMAL E PROGRAMAÇÃO FESTIVA -->
+            <section class="page" id="page-2" data-page="2">
+                <div class="corner-ornament"></div>
+                <div class="corner-ornament corner-ornament-tr"></div>
+                <div class="corner-ornament corner-ornament-br"></div>
+                <div class="corner-ornament corner-ornament-bl"></div>
+
+                <div class="h-full flex flex-col justify-between text-center p-0.5 sm:p-3">
+                    <div>
+                        <h3 class="font-serif text-lg sm:text-2xl font-bold text-burgundy-900 mb-0.5">Convite Especial</h3>
+                        <p class="text-[11px] sm:text-sm text-amber-900 font-serif italic leading-snug">
+                            As Normalistas da Escola Estadual Professor Zoroastro Vianna Passos têm a honra de convidar V.Exa. e Exma. Família para as solenidades do nosso Jubileu de Formatura.
+                        </p>
+                        <div class="w-20 h-0.5 bg-gold-400 mx-auto my-2"></div>
+                    </div>
+
+                    <!-- Programação Festiva -->
+                    <div class="space-y-2 my-auto text-left">
+                        <h4 class="font-serif text-[11px] sm:text-xs font-bold uppercase tracking-wider text-gold-800 text-center mb-1">
+                            <i class="fas fa-calendar-alt mr-1"></i> Programação Festiva
+                        </h4>
+
+                        <!-- Evento 1 -->
+                        <div class="bg-amber-50/80 p-2 sm:p-2.5 rounded-lg border border-gold-300 flex items-start gap-2.5">
+                            <div class="bg-gold-600 text-white rounded-lg p-1.5 sm:p-2 text-center min-w-[48px] sm:min-w-[55px]">
+                                <span class="block text-xs font-bold">25</span>
+                                <span class="block text-[9px] sm:text-[10px] uppercase">NOV</span>
+                            </div>
+                            <div class="text-[11px] sm:text-xs leading-snug">
+                                <span class="font-bold text-burgundy-900 text-xs sm:text-sm block">Culto de Louvor</span>
+                                <p class="text-gray-700 font-medium">19h30min — Igreja de Deus no Brasil</p>
+                                <p class="text-gray-500 text-[10px] sm:text-[11px]"><i class="fas fa-map-marker-alt text-gold-600 mr-1"></i>Rua Professor Raimundo Nonato, 37 - Siderúrgica</p>
+                            </div>
+                        </div>
+
+                        <!-- Evento 2 -->
+                        <div class="bg-amber-50/80 p-2 sm:p-2.5 rounded-lg border border-gold-300 flex items-start gap-2.5">
+                            <div class="bg-gold-600 text-white rounded-lg p-1.5 sm:p-2 text-center min-w-[48px] sm:min-w-[55px]">
+                                <span class="block text-xs font-bold">27</span>
+                                <span class="block text-[9px] sm:text-[10px] uppercase">NOV</span>
+                            </div>
+                            <div class="text-[11px] sm:text-xs leading-snug">
+                                <span class="font-bold text-burgundy-900 text-xs sm:text-sm block">Missa em Ação de Graças</span>
+                                <p class="text-gray-700 font-medium">19h00min — Matriz Nossa Senhora da Conceição</p>
+                                <p class="text-gray-500 text-[10px] sm:text-[11px]"><i class="fas fa-map-marker-alt text-gold-600 mr-1"></i>Praça Getúlio Vargas – Siderúrgica</p>
+                                <span class="inline-block mt-1 text-[9px] sm:text-[10px] bg-amber-200/70 text-amber-900 font-semibold px-2 py-0.5 rounded">
+                                    <i class="fas fa-gift mr-1"></i>Ofertório: Material de Limpeza
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Evento 3 -->
+                        <div class="bg-amber-50/80 p-2 sm:p-2.5 rounded-lg border border-gold-300 flex items-start gap-2.5">
+                            <div class="bg-gold-600 text-white rounded-lg p-1.5 sm:p-2 text-center min-w-[48px] sm:min-w-[55px]">
+                                <span class="block text-xs font-bold">28</span>
+                                <span class="block text-[9px] sm:text-[10px] uppercase">NOV</span>
+                            </div>
+                            <div class="text-[11px] sm:text-xs leading-snug">
+                                <span class="font-bold text-burgundy-900 text-xs sm:text-sm block">Confraternização</span>
+                                <p class="text-gray-700 font-medium">19h00min</p>
+                                <p class="text-amber-800 font-medium text-[10px] sm:text-[11px] italic"><i class="fas fa-user-friends mr-1"></i>Momento reservado exclusivamente para as normalistas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-1 text-center">
+                        <p class="font-serif italic text-[11px] sm:text-xs text-gold-800 font-semibold">
+                            “Sua presença é a peça principal dessa celebração inesquecível!”
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PÁGINA 3: HOMENAGENS -->
+            <section class="page" id="page-3" data-page="3">
+                <div class="corner-ornament"></div>
+                <div class="corner-ornament corner-ornament-tr"></div>
+                <div class="corner-ornament corner-ornament-br"></div>
+                <div class="corner-ornament corner-ornament-bl"></div>
+
+                <div class="h-full flex flex-col justify-between p-0.5 sm:p-2 text-center">
+                    <div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-burgundy-900">Homenagens Especiais</h3>
+                        <p class="text-[11px] sm:text-xs text-amber-800 font-serif italic">Com admiração, saudade e eterna gratidão</p>
+                        <div class="w-16 h-0.5 bg-gold-400 mx-auto my-1.5"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-left text-[11px] sm:text-xs my-auto">
+                        <!-- Homenagem de Honra -->
+                        <div class="bg-amber-50/90 p-2 sm:p-2.5 rounded-lg border border-gold-300">
+                            <h4 class="font-serif font-bold text-gold-800 uppercase tracking-wide border-b border-gold-300 pb-1 mb-1 flex items-center">
+                                <i class="fas fa-award text-gold-600 mr-1.5"></i> Homenagem de Honra
+                            </h4>
+                            <p class="mb-1"><span class="font-semibold text-gray-800">Paraninfo:</span> Marcos José de Jesus <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="font-semibold text-gray-800 mb-0.5">Professoras:</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-0.5 pl-1">
+                                <li>Maria Beatriz Salles da Luz</li>
+                                <li>Etna dos Santos <span class="in-memoriam">(in memoriam)</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Homenagem Especial -->
+                        <div class="bg-amber-50/90 p-2 sm:p-2.5 rounded-lg border border-gold-300">
+                            <h4 class="font-serif font-bold text-gold-800 uppercase tracking-wide border-b border-gold-300 pb-1 mb-1 flex items-center">
+                                <i class="fas fa-star text-gold-600 mr-1.5"></i> Homenagem Especial
+                            </h4>
+                            <ul class="space-y-0.5 text-gray-700 text-[10px] sm:text-[11px] leading-tight">
+                                <li>• Ulma Alves Nogueira <span class="in-memoriam">(in memoriam)</span></li>
+                                <li>• Ananias Lopes de Meneses <span class="in-memoriam">(in memoriam)</span></li>
+                                <li>• Pedro Brito Cunha <span class="in-memoriam">(in memoriam)</span></li>
+                                <li>• Tereza Silva | Arinos Viana | Rosa Salomão</li>
+                                <li>• Maria Helena Magalhães <span class="italic text-[9px] text-gray-500">(e demais professores)</span></li>
+                                <li>• Jair Simões</li>
+                                <li>• Lucia Clemência da Costa <span class="italic text-[9px] text-gray-500">(e demais servidores)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Homenagem de Gratidão aos Pais -->
+                    <div class="mt-1.5 p-2 sm:p-2.5 bg-gold-100/60 rounded-lg border border-gold-400 text-center">
+                        <h4 class="font-serif font-bold text-burgundy-900 text-[11px] sm:text-xs uppercase tracking-wider mb-0.5 flex items-center justify-center">
+                            <i class="fas fa-heart text-red-700 mr-1.5"></i> Homenagem de Gratidão
+                        </h4>
+                        <p class="font-serif italic text-[11px] sm:text-xs text-gray-800 leading-snug">
+                            “Aos nossos pais, Mestres da vida, da união, do amor à família, da renúncia e do exemplo.”
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PÁGINA 4: FORMANDAS TURMA A -->
+            <section class="page" id="page-4" data-page="4">
+                <div class="corner-ornament"></div>
+                <div class="corner-ornament corner-ornament-tr"></div>
+                <div class="corner-ornament corner-ornament-br"></div>
+                <div class="corner-ornament corner-ornament-bl"></div>
+
+                <div class="h-full flex flex-col justify-between p-0.5 sm:p-2">
+                    <div class="text-center">
+                        <span class="text-[9px] sm:text-[10px] font-bold text-gold-700 uppercase tracking-widest">Alunas Formandas</span>
+                        <h3 class="font-serif text-base sm:text-lg font-bold text-burgundy-900 leading-tight">Curso Colegial-Normal “A”</h3>
+                        <div class="w-16 h-0.5 bg-gold-400 mx-auto my-1"></div>
+                    </div>
+
+                    <!-- Lista de Alunas em 2 colunas compactas -->
+                    <div class="grid grid-cols-2 gap-x-2 sm:gap-x-3 text-[9.5px] sm:text-[11px] leading-tight my-auto bg-amber-50/60 p-2 rounded-lg border border-gold-200">
+                        <div>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Ana Eloisa Avendanha</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Ana Maria da Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Anete Viana <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Ângela Maria Norberto <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Ângela Santiago <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Arminda do Carmo Mateus</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Dorileia Maria da Costa</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Elenice Batista Pereira</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Eunice Aparecida Mateus</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Fátima Regina Costa Pena</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Fátima Regina de Souza</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Hulda de Oliveira Duarte</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Ivonete de Melo</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Laurislúcia da Luz <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Lídia dos Santos Costa</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Evangelista</p>
+                            <p class="py-[2px] sm:py-0.5">Maria Aparecida de Souza da Silva</p>
+                        </div>
+
+                        <div>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria da Glória Dias Viana</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria das Graças Alves dos Santos</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Lúcia de Almeida e Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria das Mercês Neves</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Nazaré Vieira</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Marília Matarelli</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Mariza Vieira</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Myrian Natália Diniz</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Nancy Fátima da Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Rosângela Lopes</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Sandra Matarelli Carli</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Sirley Maria Delgado Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Sueli dos Anjos Rodrigues</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Tânia Mari Martins</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Terezinha Duarte Lage <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5">Vanda Lúcia Flausino</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-[9px] sm:text-[10px] text-gray-400 italic pt-1">
+                        Turma Normal A — E. E. Professor Zoroastro Vianna Passos
+                    </div>
+                </div>
+            </section>
+
+            <!-- PÁGINA 5: FORMANDAS TURMA B E ENCERRAMENTO -->
+            <section class="page" id="page-5" data-page="5">
+                <div class="corner-ornament"></div>
+                <div class="corner-ornament corner-ornament-tr"></div>
+                <div class="corner-ornament corner-ornament-br"></div>
+                <div class="corner-ornament corner-ornament-bl"></div>
+
+                <div class="h-full flex flex-col justify-between p-0.5 sm:p-2">
+                    <div class="text-center">
+                        <span class="text-[9px] sm:text-[10px] font-bold text-gold-700 uppercase tracking-widest">Alunas Formandas</span>
+                        <h3 class="font-serif text-base sm:text-lg font-bold text-burgundy-900 leading-tight">Curso Colegial-Normal “B”</h3>
+                        <div class="w-16 h-0.5 bg-gold-400 mx-auto my-1"></div>
+                    </div>
+
+                    <!-- Lista de Alunas em 2 colunas compactas -->
+                    <div class="grid grid-cols-2 gap-x-2 sm:gap-x-3 text-[9.5px] sm:text-[11px] leading-tight my-auto bg-amber-50/60 p-2 rounded-lg border border-gold-200">
+                        <div>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Hely Alves de Jesus</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Ana Maria Souza</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Ângela Maria Nascimento</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Beatriz Ferreira Cândido</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Bernadete Cristina Pereira <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Célia Bárbara da Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Cemir Matilde da Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Edir Cecília da Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Elizabete Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Eva Aparecida da Fonseca <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Fátima Maria Vieira <span class="in-memoriam">(in memoriam)</span></p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Lúcia Divina da Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Alice Bonsucesso</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Bernadete de Matos</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Bernadina Andrade Carneiro</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria da Conceição Martins</p>
+                            <p class="py-[2px] sm:py-0.5">Maria da Conceição dos Santos</p>
+                        </div>
+
+                        <div>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria de Fátima Norberto</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria das Graças de Paula</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria das Graças Umbelino</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Helena Cabral de Paula</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Isabel Viana Varela</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Juvercina de Jesus</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Maria Petrina da Costa</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Marisa Aparecida da Silva</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Marlene Sebastião</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Meire Maria de Almeida Soares</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Rosalina Medeiros Simão</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Sandra Maria de Alcântara</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Sônia Maria Bernado Moura</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Sônia Santiago Garíglio</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Terezinha de Jesus Costa</p>
+                            <p class="py-[2px] sm:py-0.5 border-b border-amber-100">Terezinha Laurentina Quirino</p>
+                            <p class="py-[2px] sm:py-0.5">Zelma Zilea Martins</p>
+                        </div>
+                    </div>
+
+                    <!-- Mensagem de Fechamento -->
+                    <div class="text-center pt-1">
+                        <p class="font-serif italic text-[11px] sm:text-xs text-gold-800 font-semibold">
+                            “Educar é semear a esperança e colher o futuro.”
+                        </p>
+                        <span class="text-[9px] sm:text-[10px] text-gray-500">50 Anos de História e Gratidão</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Controles de Navegação Flutuantes / Rodapé -->
+    <footer class="no-print mt-2.5 sm:mt-5 w-full max-w-4xl flex flex-row justify-between items-center bg-burgundy-900/90 backdrop-blur-md px-3 py-2.5 sm:px-5 sm:py-3 rounded-xl border border-gold-600/40 shadow-xl text-amber-100 gap-2">
+        <!-- Botão Anterior -->
+        <button onclick="changePage(-1)" id="btnPrev" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-amber-900/80 hover:bg-gold-600 hover:text-burgundy-900 text-gold-200 border border-gold-500/50 rounded-lg text-xs font-semibold transition flex items-center justify-center gap-1.5 disabled:opacity-30 disabled:cursor-not-allowed">
+            <i class="fas fa-chevron-left"></i>
+            <span class="hidden sm:inline">Página Anterior</span>
+            <span class="sm:hidden">Anterior</span>
+        </button>
+
+        <!-- Indicador de Páginas / Bolinhas Interativas -->
+        <div class="flex flex-col sm:flex-row items-center gap-1 sm:space-x-3">
+            <span class="text-[11px] sm:text-xs font-serif text-gold-300">Página <span id="currentPageNum" class="font-bold text-white">1</span> de 5</span>
+            <div class="flex space-x-1.5" id="paginationDots">
+                <button onclick="goToPage(1)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-gold-500 transition-all transform scale-125" title="Página 1"></button>
+                <button onclick="goToPage(2)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-900/80 hover:bg-gold-400 transition-all" title="Página 2"></button>
+                <button onclick="goToPage(3)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-900/80 hover:bg-gold-400 transition-all" title="Página 3"></button>
+                <button onclick="goToPage(4)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-900/80 hover:bg-gold-400 transition-all" title="Página 4"></button>
+                <button onclick="goToPage(5)" class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-900/80 hover:bg-gold-400 transition-all" title="Página 5"></button>
+            </div>
+        </div>
+
+        <!-- Botão Próximo -->
+        <button onclick="changePage(1)" id="btnNext" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gold-600 hover:bg-gold-500 text-burgundy-900 border border-gold-400 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md">
+            <span class="hidden sm:inline">Próxima Página</span>
+            <span class="sm:hidden">Próxima</span>
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </footer>
+
+    <!-- Audio Element com Tone.js Sintetizado -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 5;
+        let isPlayingAudio = false;
+        let synth = null;
+
+        function updatePageVisibility(direction = 0) {
+            const pages = document.querySelectorAll('.page');
+            
+            pages.forEach((page, index) => {
+                const pageNum = index + 1;
+                page.classList.remove('active', 'turn-left', 'turn-right');
+
+                if (pageNum === currentPage) {
+                    page.classList.add('active');
+                    page.scrollTop = 0;
+                } else if (pageNum < currentPage) {
+                    page.classList.add('turn-left');
+                } else {
+                    page.classList.add('turn-right');
+                }
+            });
+
+            document.getElementById('currentPageNum').innerText = currentPage;
+            document.getElementById('btnPrev').disabled = currentPage === 1;
+            document.getElementById('btnNext').disabled = currentPage === totalPages;
+
+            const dots = document.querySelectorAll('#paginationDots button');
+            dots.forEach((dot, idx) => {
+                if (idx + 1 === currentPage) {
+                    dot.className = "w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-gold-500 transition-all transform scale-125 shadow-md";
+                } else {
+                    dot.className = "w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-900/80 hover:bg-gold-400 transition-all";
+                }
+            });
+        }
+
+        function changePage(delta) {
+            const newPage = currentPage + delta;
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                updatePageVisibility(delta);
+            }
+        }
+
+        function goToPage(pageNumber) {
+            if (pageNumber >= 1 && pageNumber <= totalPages) {
+                const delta = pageNumber - currentPage;
+                currentPage = pageNumber;
+                updatePageVisibility(delta);
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+                changePage(1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                changePage(-1);
+            }
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const book = document.getElementById('book');
+        book.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        book.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 40) {
+                changePage(1);
+            }
+            if (touchEndX > touchStartX + 40) {
+                changePage(-1);
+            }
+        }
+
+        function printInvitation() {
+            window.print();
+        }
+
+        async function toggleAudio() {
+            const btn = document.getElementById('audioBtn');
+            const icon = document.getElementById('audioIcon');
+            const text = document.getElementById('audioText');
+
+            if (!isPlayingAudio) {
+                await Tone.start();
+                
+                if (!synth) {
+                    synth = new Tone.PolySynth(Tone.Synth, {
+                        oscillator: { type: "sine" },
+                        envelope: {
+                            attack: 0.1,
+                            decay: 0.8,
+                            sustain: 0.4,
+                            release: 1.2
+                        }
+                    }).toDestination();
+                    synth.volume.value = -12;
+
+                    const notes = ["C4", "E4", "G4", "B4", "C5", "G4", "E4", "A4", "C5", "E5", "G5"];
+                    let index = 0;
+
+                    Tone.Transport.scheduleRepeat((time) => {
+                        let note = notes[index % notes.length];
+                        synth.triggerAttackRelease(note, "8n", time);
+                        index++;
+                    }, "4n");
+                }
+
+                Tone.Transport.start();
+                isPlayingAudio = true;
+                icon.className = "fas fa-volume-up text-gold-400";
+                text.innerText = "Pausar";
+                btn.classList.add("bg-gold-600", "text-burgundy-900");
+            } else {
+                Tone.Transport.stop();
+                isPlayingAudio = false;
+                icon.className = "fas fa-music";
+                text.innerText = "Som";
+                btn.classList.remove("bg-gold-600", "text-burgundy-900");
+            }
+        }
+
+        window.onload = function() {
+            updatePageVisibility();
+        };
+    </script>
+</body>
+</html>
